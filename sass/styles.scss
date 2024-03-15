@@ -27,7 +27,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  //   margin-bottom: 50px;
   .headmain {
     background: rgb(131, 58, 180);
     background: linear-gradient(
@@ -94,13 +94,15 @@ header {
 
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 100%;
   height: 100vh;
   article {
-    width: 1200px;
+    width: 100%;
     height: 100%;
+
     .burger {
       display: flex;
       justify-content: space-around;
@@ -133,10 +135,7 @@ main {
             height: 150px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
           .burger-2 {
@@ -148,10 +147,7 @@ main {
             height: 150px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
           .burger-3 {
@@ -163,10 +159,7 @@ main {
             height: 150px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
           .burger-4 {
@@ -178,10 +171,7 @@ main {
             height: 150px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
 
@@ -194,10 +184,7 @@ main {
             height: 100px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
           .chips-2 {
@@ -209,10 +196,7 @@ main {
             height: 100px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
           .chips-3 {
@@ -224,10 +208,7 @@ main {
             height: 100px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
             }
           }
           .chips-4 {
@@ -239,10 +220,22 @@ main {
             height: 100px;
             button {
               padding: 7px;
-              &:hover {
-                cursor: pointer;
-                background-color: orange;
-              }
+              cursor: pointer;
+            }
+          }
+
+          .burger-1,
+          .burger-2,
+          .burger-3,
+          .burger-4,
+          .chips-1,
+          .chips-2,
+          .chips-3,
+          .chips-4 {
+            border: 2px inset rgb(255, 158, 158);
+            &:hover {
+              transform: scale(1.005);
+              transition: transform 0.8s ease-in-out;
             }
           }
         }
@@ -259,7 +252,17 @@ main {
         border: 2px dotted red;
       }
     }
-
+    .cart-img-top {
+      height: 30px;
+      max-width: 100%;
+      background-image: url(https://i.gifer.com/3OEd.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: wheat;
+      border: 2px dotted red;
+      margin-bottom: 50px;
+    }
     /**********/
   }
 }
