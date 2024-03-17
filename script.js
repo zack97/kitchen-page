@@ -11,6 +11,22 @@ const cart = document.querySelector(".cart");
 const ul = document.createElement("ul");
 const iconeCart = document.querySelector(".icone-cart");
 const dropdown = document.querySelector(" #myDropdown");
+let checkdrop = false;
+
+window.addEventListener("click", function (e) {
+  if (e.target === iconeCart) {
+    if (checkdrop) {
+      dropdown.style.display = "none";
+      checkdrop = false;
+    } else {
+      dropdown.style.display = "block";
+      checkdrop = true;
+    }
+  } else {
+    dropdown.style.display = "none";
+    checkdrop = false;
+  }
+});
 
 burgerdata.forEach((item, index) => {
   const li = document.createElement("li");
@@ -31,30 +47,17 @@ burgerdata.forEach((item, index) => {
 
   const price = document.createElement("i");
   price.textContent = `€${item.price}`;
-  const name_target = item.name;
-  const price_target = `€${item.price}`;
 
   button.addEventListener("click", function () {
+    const name_target = document.createElement("p");
+    name_target.textContent = item.name;
+    const price_target = document.createElement("p");
+    price_target.textContent = `€${item.price}`;
+
     const divburgerdetails = document.createElement("div");
+    divburgerdetails.setAttribute("class", "divburg");
     divburgerdetails.append(name_target, price_target);
     cart.appendChild(divburgerdetails);
-  });
-
-  let checkdrop = false;
-
-  window.addEventListener("click", function (e) {
-    if (e.target === iconeCart) {
-      if (checkdrop) {
-        dropdown.style.display = "none";
-        checkdrop = false;
-      } else {
-        dropdown.style.display = "block";
-        checkdrop = true;
-      }
-    } else {
-      dropdown.style.display = "none";
-      checkdrop = false;
-    }
   });
 
   div2.appendChild(p);

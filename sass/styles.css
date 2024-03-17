@@ -54,6 +54,12 @@ header .headmain .head2 i {
 header .headmain .head2 #myDropdown {
   display: none;
 }
+header .headmain .head2 .divburg {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+  padding: 0px 10px;
+}
 header .headmain .head2 .cart {
   position: absolute;
   min-height: 100px;
