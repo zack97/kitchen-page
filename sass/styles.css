@@ -45,11 +45,18 @@ header .headmain .head1 {
 header .headmain .head1 i {
   cursor: pointer;
 }
+header .headmain .head2 {
+  position: relative;
+}
 header .headmain .head2 i {
   font-size: 2rem;
 }
+header .headmain .head2 #myDropdown {
+  display: none;
+}
 header .headmain .head2 .cart {
-  min-height: 200px;
+  position: absolute;
+  min-height: 100px;
   width: 300px;
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(31, 28, 34) 0%, rgb(58, 9, 9) 50%, rgb(67, 28, 13) 100%);
@@ -58,22 +65,6 @@ header .headmain .head2 .cart {
 header .headmain .head2 .cart h3 {
   background-color: black;
   text-align: center;
-}
-header .dropbtn:hover,
-header .dropbtn:focus {
-  cursor: pointer;
-}
-header .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-header .show {
-  display: block;
 }
 
 main {

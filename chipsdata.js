@@ -1,8 +1,8 @@
 const chips = [
-  { name: "Whopper Cheese Menu", price: 12.95 },
-  { name: "Whopper fries Menu", price: 15.95 },
-  { name: "Biki Cheese Menu", price: 8.95 },
-  { name: "Whopper full Menu", price: 20.95 },
+  { name: "Big fries Menu", price: 5.24 },
+  { name: "Whopper fries Menu", price: 7.5 },
+  { name: "Crispy fries Menu", price: 6.95 },
+  { name: "Cheese fries Menu", price: 10.5 },
 ];
 
 export { chips };

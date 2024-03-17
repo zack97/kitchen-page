@@ -49,11 +49,16 @@ header {
       }
     }
     .head2 {
+      position: relative;
       i {
         font-size: 2rem;
       }
+      #myDropdown {
+        display: none;
+      }
       .cart {
-        min-height: 200px;
+        position: absolute;
+        min-height: 100px;
         width: 300px;
         background: rgb(131, 58, 180);
         background: linear-gradient(
@@ -72,24 +77,24 @@ header {
     }
   }
 
-  .dropbtn:hover,
-  .dropbtn:focus {
-    cursor: pointer;
-  }
+  // .dropbtn:hover,
+  // .dropbtn:focus {
+  //   cursor: pointer;
+  // }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
+  // .dropdown-content {
+  //   display: none;
+  //   position: absolute;
+  //   background-color: #f1f1f1;
+  //   min-width: 160px;
+  //   overflow: auto;
+  //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  //   z-index: 1;
+  // }
 
-  .show {
-    display: block;
-  }
+  // .show {
+  //   display: block;
+  // }
 }
 
 main {

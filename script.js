@@ -5,9 +5,12 @@ import { chips } from "./chipsdata.js";
 const burgerdiv = document.querySelector(".burger");
 console.log(burgerdiv);
 //
+const cart = document.querySelector(".cart");
 
 // Function to create and populate the menu items
 const ul = document.createElement("ul");
+const iconeCart = document.querySelector(".icone-cart");
+const dropdown = document.querySelector(" #myDropdown");
 
 burgerdata.forEach((item, index) => {
   const li = document.createElement("li");
@@ -16,6 +19,7 @@ burgerdata.forEach((item, index) => {
   const button = document.createElement("button");
   const icon = document.createElement("i");
   icon.className = "fa-solid fa-plus burger-btn";
+
   button.appendChild(icon);
   div1.appendChild(button);
   li.appendChild(div1);
@@ -24,13 +28,41 @@ burgerdata.forEach((item, index) => {
   div2.className = "price-menu";
   const p = document.createElement("p");
   p.textContent = item.name;
+
   const price = document.createElement("i");
   price.textContent = `€${item.price}`;
+  const name_target = item.name;
+  const price_target = `€${item.price}`;
+
+  button.addEventListener("click", function () {
+    const divburgerdetails = document.createElement("div");
+    divburgerdetails.append(name_target, price_target);
+    cart.appendChild(divburgerdetails);
+  });
+
+  let checkdrop = false;
+
+  window.addEventListener("click", function (e) {
+    if (e.target === iconeCart) {
+      if (checkdrop) {
+        dropdown.style.display = "none";
+        checkdrop = false;
+      } else {
+        dropdown.style.display = "block";
+        checkdrop = true;
+      }
+    } else {
+      dropdown.style.display = "none";
+      checkdrop = false;
+    }
+  });
+
   div2.appendChild(p);
   div2.appendChild(price);
   li.appendChild(div2);
 
   ul.appendChild(li);
+
   burgerdiv.insertBefore(ul, burgerdiv.firstElementChild);
 });
 
@@ -41,6 +73,7 @@ chips.forEach((item, index) => {
   const button = document.createElement("button");
   const icon = document.createElement("i");
   icon.className = "fa-solid fa-plus burger-btn";
+
   button.appendChild(icon);
   div1.appendChild(button);
   li.appendChild(div1);
@@ -51,6 +84,15 @@ chips.forEach((item, index) => {
   p.textContent = item.name;
   const price = document.createElement("i");
   price.textContent = `€${item.price}`;
+  const name_target = item.name;
+  const price_target = `€${item.price}`;
+
+  button.addEventListener("click", function () {
+    const divburgerdetails = document.createElement("div");
+    divburgerdetails.append(name_target, price_target);
+    cart.appendChild(divburgerdetails);
+  });
+
   div2.appendChild(p);
   div2.appendChild(price);
   li.appendChild(div2);

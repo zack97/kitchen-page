@@ -13,46 +13,14 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>DARK - KITCHEN</title>
   </head>
-  <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    window.onclick = function (event) {
-      if (!event.target.matches(".dropbtn")) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
-        }
-      }
-    };
-  </script>
+
   <body>
     <script type="module" src="./script.js"></script>
 
     <header>
       <div class="headmain">
-        <!-- <div class="head2 dropdown">
-          <i
-            onclick="myfunction()"
-            class="fa-solid fa-cart-shopping dropbtn"
-            id="cartIcon"
-          ></i>
-          <div id="myDropdown" class="dropdown-content">
-            <div class="cart">
-              <div>
-                <h3>CART</h3>
-              </div>
-            </div>
-          </div>
-        </div> -->
         <div class="head2 dropdown">
-          <i
-            onclick="myFunction()"
-            class="fa-solid fa-cart-shopping dropbtn"
-          ></i>
+          <i class="fa-solid fa-cart-shopping icone-cart"></i>
           <div id="myDropdown" class="dropdown-content">
             <div class="cart">
               <div>
