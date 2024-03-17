@@ -50,6 +50,7 @@ header .headmain .head2 {
 }
 header .headmain .head2 i {
   font-size: 2rem;
+  cursor: pointer;
 }
 header .headmain .head2 #myDropdown {
   display: none;
