@@ -57,6 +57,17 @@ header {
       #myDropdown {
         display: none;
       }
+      //********
+      .dropdown-content {
+        overflow: hidden;
+      }
+      .dropdown-content .cart {
+        overflow-y: auto;
+        max-height: 200px;
+        width: 250px;
+      }
+
+      //********
       .divburg {
         margin: 10px;
         display: flex;
@@ -65,8 +76,6 @@ header {
       }
       .cart {
         position: absolute;
-        min-height: 100px;
-        width: 300px;
         background: rgb(131, 58, 180);
         background: linear-gradient(
           90deg,

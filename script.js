@@ -28,6 +28,26 @@ window.addEventListener("click", function (e) {
   }
 });
 
+let totalPrice = 0;
+function updateTotalPrice() {
+  const totalPriceElement = document.querySelector("#totalPrice");
+  totalPriceElement.textContent = `Total Price: €${totalPrice.toFixed(2)}`;
+}
+
+function addItemToCart(itemName, itemPrice) {
+  const nameTarget = document.createElement("p");
+  nameTarget.textContent = itemName;
+  const priceTarget = document.createElement("p");
+  priceTarget.textContent = `€${itemPrice.toFixed(2)}`;
+  const divBurgerDetails = document.createElement("div");
+  divBurgerDetails.setAttribute("class", "divburg");
+  divBurgerDetails.append(nameTarget, priceTarget);
+  cart.appendChild(divBurgerDetails);
+
+  totalPrice += itemPrice;
+  updateTotalPrice();
+}
+
 burgerdata.forEach((item, index) => {
   const li = document.createElement("li");
   const div1 = document.createElement("div");
@@ -49,14 +69,7 @@ burgerdata.forEach((item, index) => {
   price.textContent = `€${item.price}`;
 
   button.addEventListener("click", function () {
-    const name_target = document.createElement("p");
-    name_target.textContent = item.name;
-    const price_target = document.createElement("p");
-    price_target.textContent = `€${item.price}`;
-
-    const divburgerdetails = document.createElement("div");
-    divburgerdetails.setAttribute("class", "divburg");
-    divburgerdetails.append(name_target, price_target);
+    addItemToCart(item.name, item.price);
     cart.appendChild(divburgerdetails);
   });
 
@@ -87,12 +100,9 @@ chips.forEach((item, index) => {
   p.textContent = item.name;
   const price = document.createElement("i");
   price.textContent = `€${item.price}`;
-  const name_target = item.name;
-  const price_target = `€${item.price}`;
 
   button.addEventListener("click", function () {
-    const divburgerdetails = document.createElement("div");
-    divburgerdetails.append(name_target, price_target);
+    addItemToCart(item.name, item.price);
     cart.appendChild(divburgerdetails);
   });
 
